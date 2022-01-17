@@ -27,6 +27,7 @@ const Header = () => {
                 </HeaderButtonGroup>
                 {/* <Image width="40" height="40" src={avatar} /> */}
                 {/* <SubTitle>{t('admin')}</SubTitle> */}
+                
             </HeaderTop>
         </HeaderStyled>
     )
