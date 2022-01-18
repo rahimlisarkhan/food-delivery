@@ -3,6 +3,8 @@ import {AppProvider} from "../app/AppProvider"
 import Head from 'next/head'
 import Router from 'next/router'
 import NProgress from 'nprogress'
+import { appWithTranslation } from 'next-i18next';
+
 
 Router.events.on('routeChangeStart', (url) => {
   NProgress.start()
@@ -24,4 +26,4 @@ const MyApp = ({ Component, pageProps }) => {
   )
 }
 
-export default MyApp
+export default appWithTranslation(MyApp);

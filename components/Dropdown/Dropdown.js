@@ -30,7 +30,7 @@ const Dropdown = () => {
     // },[options,i18n])
 
     const handleMenuItemClick = (lang, index) => {
-        // i18n.changeLanguage(lang)
+        i18n.changeLanguage(lang)
         localStorage.setItem("lang", lang)
         setSelectedIndex(index);
         setOpen(false);
@@ -52,7 +52,7 @@ const Dropdown = () => {
         <React.Fragment>
             <ButtonGroup variant="text" ref={anchorRef} aria-label="split button">
                 <Button onClick={handleToggle}>
-                    {/* <Image cover="true" radius="100" width="40" height="40" alt="flag" src={options[0]?.flag} /> */}
+                    <Image cover="true" radius="100" width="40" height="40" alt="flag" src={options[0]?.flag} />
                 </Button>
             </ButtonGroup>
             <Popper
@@ -76,7 +76,7 @@ const Dropdown = () => {
                                             selected={index === selectedIndex}
                                             onClick={() => handleMenuItemClick(lang, index)}
                                         >
-                                            <Image cover radius="100" width="40" height="40" src={flag} />
+                                            <Image cover radius="100" width="40" height="40" src={flag} alt="flag" />
                                         </MenuItem>
                                     ))}
                                 </MenuList>

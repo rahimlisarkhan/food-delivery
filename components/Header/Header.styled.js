@@ -4,8 +4,8 @@ import styled, { css } from "styled-components";
 export const HeaderStyled = styled.header`
     ${({ theme }) => css`
     background: ${theme.colors.whiteLight1};
-    padding:${theme.boxModel.padding.large} 60px;
-    margin:${theme.boxModel.margin.large} 0;
+    padding:${theme.boxModel.padding.normal} 60px;
+    margin:${theme.boxModel.margin.normal} 0;
     color:${theme.colors.grayText1} !important;
     `}
     /* width: 97%; */
@@ -31,6 +31,7 @@ export const HeaderMenuGroup = styled.div`
     align-items:center;
     justify-content:space-between;
 `;
+
 
 export const SubTitle = styled.span`
     text-decoration: capitalize !important;
