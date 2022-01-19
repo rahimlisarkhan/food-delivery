@@ -8,7 +8,8 @@ export const ButtonStyled = styled(Button).attrs(() => ({
     width: ${({ width }) => width ? `${width}px` : "auto"};
     height: ${({ height }) => height ? `${height}px` : "auto"};
     text-transform:capitalize;
-    font-size:  ${({ theme }) => theme.font.size.small};;
+    font-size:  ${({ theme, font }) => font ? `${font}px` : theme.font.size.small};
+    /* font-weight:  ${({ bold }) => bold && `500`}; */
     background-color: ${({ theme, color }) => {
         switch (color) {
             case "red":
@@ -18,7 +19,7 @@ export const ButtonStyled = styled(Button).attrs(() => ({
         }
     }
     };
-    margin:0 ${({ theme }) => theme.boxModel.margin.normal};
+    /* margin:0 ${({ theme }) => theme.boxModel.margin.normal}; */
     border-radius: 30px; 
 
     &:hover{

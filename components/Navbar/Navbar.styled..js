@@ -14,11 +14,13 @@ export const NavList = styled(Box)`
 `
 
 export const NavItem = styled(Typography)`
-min-width:100px;
+min-width:110px;
 font-weight:${({ active }) => active === "true" && 700};
 color:${({ theme, active }) => active === "true" && theme.colors.lightRed};
 cursor:pointer;
+margin:0 5px;
 transition: all .2s;
+text-transform: none;
 
 &:hover{
     color:${({ theme }) => theme.colors.lightRed};

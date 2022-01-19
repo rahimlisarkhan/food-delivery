@@ -1,6 +1,7 @@
+import Image from "next/image";
 import styled from "styled-components";
 
-export const ImageStyled = styled.img.attrs(({width, height})=>({
+export const ImageStyled = styled(Image).attrs(({width, height})=>({
     width: width || "100%",
     height:height || "100%",
     

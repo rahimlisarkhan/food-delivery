@@ -8,30 +8,31 @@ import Popper from '@mui/material/Popper';
 import MenuItem from '@mui/material/MenuItem';
 import MenuList from '@mui/material/MenuList';
 import { GrowStyled } from './Dropdown.styled';
-// import { useTranslation } from 'react-i18next';
+import { useRouter } from 'next/router';
 
 const Dropdown = () => {
     const [open, setOpen] = React.useState(false);
     const anchorRef = React.useRef(null);
     const [selectedIndex, setSelectedIndex] = React.useState(0);
-    // const { i18n } = useTranslation();
+    const { pathname, locale,replace } = useRouter()
 
     let options = React.useMemo(() => [
         { flag: "/image/flag/en.png", lang: 'en' },
         { flag: "/image/flag/fr.png", lang: 'fr' },
         { flag: "/image/flag/az.png", lang: 'az' }
-    ],[])
+    ], [])
 
-    // React.useEffect(() => {
-    //     let lang = localStorage.getItem("lang") || "en"
-    //     i18n.changeLanguage(lang)
-    //     let pos = options?.map(e => e.lang ).indexOf(lang);
-    //     setSelectedIndex(pos)
-    // },[options,i18n])
+    const handleLocaleChange = (lang) => {
+       replace(pathname, pathname, { locale: lang })
+    }
+
+    React.useEffect(() => {
+        let pos = options?.map(e => e.lang).indexOf(locale);
+        setSelectedIndex(pos)
+    }, [])
 
     const handleMenuItemClick = (lang, index) => {
-        i18n.changeLanguage(lang)
-        localStorage.setItem("lang", lang)
+        handleLocaleChange(lang)
         setSelectedIndex(index);
         setOpen(false);
     };
@@ -52,7 +53,12 @@ const Dropdown = () => {
         <React.Fragment>
             <ButtonGroup variant="text" ref={anchorRef} aria-label="split button">
                 <Button onClick={handleToggle}>
-                    <Image cover="true" radius="100" width="40" height="40" alt="flag" src={options[0]?.flag} />
+                    <Image cover="true"
+                        radius="100"
+                        width="40"
+                        height="40"
+                        alt="flag"
+                        src={options[selectedIndex]?.flag} />
                 </Button>
             </ButtonGroup>
             <Popper
@@ -60,7 +66,7 @@ const Dropdown = () => {
                 anchorEl={anchorRef.current}
                 role={undefined}
                 transition
-                style={{zIndex:100}}
+                style={{ zIndex: 100 }}
             >
                 {({ TransitionProps, placement }) => (
                     <GrowStyled
