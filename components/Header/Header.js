@@ -11,7 +11,7 @@ import Image from "../Image";
 
 const Header = (props) => {
 
-    let { t } = useTranslation('common');
+    let { t } = useTranslation();
 
     let [open, setOpen] = useState(false);
 
@@ -54,7 +54,7 @@ const Header = (props) => {
                     </HeaderStyled.ButtonGroup>
                 </HeaderStyled.Info>
                 <HeaderStyled.BottomImage>
-                    <HeaderStyled.AdImage width="700" src="/image/sendvic.png" alt="sendic" />
+                    <HeaderStyled.AdImage  src="/image/sendvic.png" alt="sendic" />
                 </HeaderStyled.BottomImage>
             </HeaderStyled.Bottom>
         </HeaderStyled.Content>

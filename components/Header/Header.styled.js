@@ -49,7 +49,7 @@ flex:1;
 
 export const BottomImage = styled(Box)`
 flex:1;
-height: 550px;
+height: 500px;
 background: ${({theme})=>theme.colors.black};
 border-radius: 80px;
 margin:80px 0 0 40px ;
@@ -73,14 +73,14 @@ export const ButtonOutline = styled(Button).attrs(() => ({
         border-color: ${({ theme }) => theme.colors.grayText2};
 
     }
-   
 `
 
-export const AdImage = styled(Image)`
-max-width: 900px;
-height: 650px;
+export const AdImage = styled(Image).attrs(()=>({
+    width: 700,
+    height:650,
+}))`
 position: absolute;
 top: -5%;
-left: -12%;
+left: -15%;
 
 `
