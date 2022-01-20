@@ -62,15 +62,15 @@ export const ButtonOutline = styled(Button).attrs(() => ({
 }))`
     width: ${({ width }) => width ? `${width}px` : "auto"};
     height: ${({ height }) => height ? `${height}px` : "auto"};
-    color: ${({ theme }) => theme.colors.grayText1};
-    border-color: ${({ theme }) => theme.colors.grayText1};
-    text-transform:capitalize;
-    font-size:  ${({ theme, font }) => font ? `${font}px` : theme.font.size.small};
-    margin:0 ${({ theme }) => theme.boxModel.margin.normal};
-    border-radius: 30px; 
+    color: ${({ theme }) => theme.colors.grayText1}  !important;
+    border-color: ${({ theme }) => theme.colors.grayText1} !important;
+    text-transform:capitalize !important;
+    font-size:  ${({ theme, font }) => font ? `${font}px` : theme.font.size.small}  !important;
+    margin:0 ${({ theme }) => theme.boxModel.margin.normal} !important;
+    border-radius: 30px !important; 
 
     &:hover{
-        border-color: ${({ theme }) => theme.colors.grayText2};
+        border-color: ${({ theme }) => theme.colors.grayText2} !important;
 
     }
 `

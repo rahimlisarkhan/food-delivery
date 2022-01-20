@@ -21,9 +21,9 @@ export const TypographyText = styled(Typography).attrs(() => ({
                     return theme.colors.textBlack;
             }
         }
-        };
-        font-size:${font ? `${font}px` : theme.font.size.medium};
-        font-weight:${bold && `bold`};
+        }  !important;
+        font-size:${font ? `${font}px` : theme.font.size.medium} !important;
+        font-weight:${bold && `bold`} !important;
         margin:15px 0;
         line-height: 1.3;
         `}

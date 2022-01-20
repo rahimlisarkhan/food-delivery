@@ -7,7 +7,7 @@ export const ButtonStyled = styled(Button).attrs(() => ({
 }))`
     width: ${({ width }) => width ? `${width}px` : "auto"};
     height: ${({ height }) => height ? `${height}px` : "auto"};
-    text-transform:capitalize;
+    text-transform:capitalize !important;
     font-size:  ${({ theme, font }) => font ? `${font}px` : theme.font.size.small} !important;
     /* font-weight:  ${({ bold }) => bold && `500`}; */
     background-color: ${({ theme, color }) => {

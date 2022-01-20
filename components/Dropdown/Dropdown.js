@@ -53,7 +53,7 @@ const Dropdown = () => {
         <React.Fragment>
             <ButtonGroup variant="text" ref={anchorRef} aria-label="split button">
                 <Button onClick={handleToggle}>
-                    <Image cover="true"
+                    <Image 
                         radius="100"
                         width="40"
                         height="40"
