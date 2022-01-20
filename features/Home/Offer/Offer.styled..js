@@ -7,9 +7,9 @@ export const OfferContent = styled(Grid).attrs(()=>({
     container:true,
 }))`
 display: flex;
-flex-direction: ${({rotate})=> !rotate ? "row" : "row-reverse"};
-margin-top:200px;
-    justify-content: center;
+flex-direction: ${({rotate})=> !rotate ? "row" : "row-reverse"} !important;
+margin-top:200px !important;
+    justify-content: center !important;
 `
 
 
@@ -18,8 +18,8 @@ export const OfferInfo = styled(Grid).attrs(()=>({
     md:6
 }))`
 display: flex;
-flex-direction: column;
-align-items: center;
+flex-direction: column !important; 
+align-items: center !important;
 `
 
 

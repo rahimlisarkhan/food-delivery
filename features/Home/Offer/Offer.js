@@ -19,9 +19,8 @@ const Offer = ({ title, desc, img, rotate }) => {
                     <OfferImage rotate={rotate} src={img} alt="offer" />
                 </OfferBox>
             </OfferInfo>
-        </OfferContent> 
-    )
-
+        </OfferContent>
+        )
 }
 
 export default React.memo(Offer)

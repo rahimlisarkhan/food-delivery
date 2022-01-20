@@ -1,8 +1,6 @@
 import { Box } from "@mui/material";
 import styled from "styled-components";
 
-
-
 export const FooterTopStyled = styled(Box)`
 background-color:${({theme})=>theme.colors.blackLight};
 min-width:1066px;
