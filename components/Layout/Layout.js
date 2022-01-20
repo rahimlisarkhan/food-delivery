@@ -1,16 +1,21 @@
 import Container from '@mui/material/Container';
-import Header from '../Header/Header';
+import Header from '../Header';
+import Footer from '../Footer';
 import Main from '../Main/';
-
+import { Fragment } from 'react';
+Footer
 const Layout = ({ children }) => {
 
     return (
-        <Container maxWidth="xl" >
-            <Header />
-            <Main>
-                {children}
-            </Main>
-        </Container>
+        <Fragment>
+            <Container maxWidth="xl" >
+                <Header />
+                <Main>
+                    {children}
+                </Main>
+            </Container>
+            <Footer />
+        </Fragment>
     )
 }
 

@@ -20,5 +20,6 @@ export const colors = {
     lightRed:"#EB5757",
     mainRed:"#D63626",
     lightPink:"#EC5CF8",
-    black:"#181617"
+    black:"#181617",
+    blackLight:"#272727"
 }

@@ -8,7 +8,7 @@ export const InfoTop = styled(Grid).attrs(()=>({
     item:true,
     md:12
 }))`
-margin: 0 auto !important;
+margin-top:40px !important;
 `
 
 
