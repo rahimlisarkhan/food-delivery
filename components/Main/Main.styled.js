@@ -6,5 +6,8 @@ import { Grid } from "@mui/material"
 
 export const MainStyled = styled(Grid).attrs(()=>({
     container:true,
-    spacing:2
-}))``
+    spacing:3
+}))`
+    padding:${({theme})=>theme.boxModel.padding.normal} 25px;
+
+`

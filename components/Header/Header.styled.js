@@ -74,7 +74,6 @@ export const ButtonOutline = styled(Button).attrs(() => ({
 
     }
 `
-
 export const AdImage = styled(Image).attrs(()=>({
     width: 700,
     height:650,
@@ -82,5 +81,4 @@ export const AdImage = styled(Image).attrs(()=>({
 position: absolute;
 top: -5%;
 left: -15%;
-
 `

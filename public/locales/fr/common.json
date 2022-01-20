@@ -1,6 +1,9 @@
 {
-    "header title": "Notre site Food facilite la recherche de produits locaux",
+    "header title": "Notre site Food facilite la recherche",
     "header desc": "Lorem ipsum est un texte d'espace réservé couramment utilisé dans les secteurs du graphisme, de l'impression et de l'édition pour prévisualiser les mises en page et les maquettes visuelles.",
-    "order_now": "Commander maintenant",
-    "sign_up": "S'inscrire"
+    "order_now": "Commander",
+    "sign_up": "S'inscrire",
+    "features":"Caractéristiques",
+    "features desc":"Lorem ipsum est un espace réservé couramment utilisé dans le graphique",
+    "out popular": "Notre mise à jour populaire sur les nouveaux aliments"
 }

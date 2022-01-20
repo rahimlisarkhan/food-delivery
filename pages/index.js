@@ -2,8 +2,8 @@ import { useTranslation } from 'next-i18next';
 import Head from 'next/head'
 import { Fragment } from 'react'
 import Layout from '../components/Layout'
+import HomeContainer from "../features/Home/HomeContainer"
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-
 
 export default function Home() {
 
@@ -16,11 +16,12 @@ export default function Home() {
         <title> {t("home")} | Foody Delivery</title>
       </Head>
       <Layout>
-
+        <HomeContainer/>
       </Layout>
     </Fragment>
   )
 }
+
 
 export async function getStaticProps({ locale }) {
   return {

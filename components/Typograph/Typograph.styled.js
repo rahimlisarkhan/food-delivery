@@ -8,7 +8,7 @@ export const TypographyText = styled(Typography).attrs(() => ({
     component: "div"
 }))`
     padding: 0 !important;
-    ${({ theme, font, color,bold }) => css`
+    ${({ theme, font, color,bold,center }) => css`
         color:${() => {
             switch (color) {
                 case "dark":
@@ -23,6 +23,7 @@ export const TypographyText = styled(Typography).attrs(() => ({
         }
         }  !important;
         font-size:${font ? `${font}px` : theme.font.size.medium} !important;
+        text-align:${center ? `center` : "none"} !important;
         font-weight:${bold && `bold`} !important;
         margin:15px 0 !important;
         line-height: 1.3 !important;
