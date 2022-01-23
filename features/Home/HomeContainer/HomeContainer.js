@@ -1,7 +1,7 @@
 import { useTranslation } from "next-i18next"
 import { Fragment } from "react"
-import Info from "../Info"
-import Offer from "../Offer"
+import Info from "../components/Info"
+import Offer from "../components/Offer"
 
 export const HomeContainer = () => {
 
