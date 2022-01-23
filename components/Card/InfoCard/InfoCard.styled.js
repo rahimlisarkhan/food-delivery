@@ -5,7 +5,7 @@ import styled from "styled-components";
 export const InfoCardStyled = styled(Card)`
 width: 327px;
 height: 395px;
-transition: all .2s;
+transition: all .2s !important;
 
 &:hover{
     transform:scale(.98)

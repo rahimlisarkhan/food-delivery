@@ -9,8 +9,12 @@ import { useTranslation } from "next-i18next";
 import Typography from "../Typograph"
 import Image from "../Image";
 import YummyCard from "../Card/YummyCard"
+import { useRouter } from "next/router";
 
-const Header = () => {
+const Header = (props) => {
+
+    const {pathname} = useRouter()
+
 
     let { t } = useTranslation();
 
@@ -19,22 +23,10 @@ const Header = () => {
     const handleClick = () => {
         setOpen(!open)
     }
-
-    return (
-        <HeaderStyled.Content>
-            <HeaderStyled.Top>
-                <HeaderStyled.MenuGroup>
-                    <Image width="92" height="32" src="/image/icon/logo.svg" alt="Logo" />
-                    <Navbar />
-                </HeaderStyled.MenuGroup>
-                <HeaderStyled.ButtonGroup>
-                    <Dropwdown />
-                    <Button width="117" onClick={handleClick}>{t('sign_up')}</Button>
-                    <BasketBadge count={8} />
-                    <AccountMenu />
-                </HeaderStyled.ButtonGroup>
-            </HeaderStyled.Top>
-            <HeaderStyled.Bottom>
+    const renderHeaderBottom = () => {
+        if(pathname === "/"){
+            return (
+                <HeaderStyled.Bottom>
                 <HeaderStyled.Info>
                     <Typography bold="true" font="60">
                         {t("header title")}
@@ -57,6 +49,29 @@ const Header = () => {
                     <YummyCard title="Yummy french fries" img="/image/fries.png" top="40" left="-35" />
                 </HeaderStyled.BottomImage>
             </HeaderStyled.Bottom>
+            )
+        }
+    }
+
+    const isBottom = () => {
+        return pathname === "/" ? "true" : "false"
+    }
+
+    return (
+        <HeaderStyled.Content bottom={isBottom()}>
+            <HeaderStyled.Top>
+                <HeaderStyled.MenuGroup>
+                    <Image width="92" height="32" src="/image/icon/logo.svg" alt="Logo" />
+                    <Navbar />
+                </HeaderStyled.MenuGroup>
+                <HeaderStyled.ButtonGroup>
+                    <Dropwdown />
+                    <Button width="117" onClick={handleClick}>{t('sign_up')}</Button>
+                    <BasketBadge count={8} />
+                    <AccountMenu />
+                </HeaderStyled.ButtonGroup>
+            </HeaderStyled.Top>
+            {renderHeaderBottom()}
         </HeaderStyled.Content>
     )
 }

@@ -4,15 +4,15 @@ import Image from "../Image";
 
 
 export const Content = styled.header`
-    ${({ theme }) => css`
+    ${({ theme,bottom }) => css`
     background: ${theme.colors.whiteLight1};
     padding:${theme.boxModel.padding.normal} 60px;
     margin:${theme.boxModel.margin.normal} 0;
     color:${theme.colors.grayText1} !important;
+    height:${bottom === "true" ? "838px" : "102px"} ;
     `}
-    /* width: 97%; */
-    height: 838px;
     border-radius:4px;
+
 `;
 
 
