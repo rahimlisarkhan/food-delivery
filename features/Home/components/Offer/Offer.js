@@ -1,6 +1,7 @@
 import React from "react"
 import { OfferInfo, OfferBox, OfferImage, OfferContent } from "./Offer.styled."
-import TypographyText from "../../../components/Typograph"
+import TypographyText from "../../../../components/Typograph"
+import PropTypes from 'prop-types';
 
 const Offer = ({ title, desc, img, rotate }) => {
 
@@ -24,3 +25,11 @@ const Offer = ({ title, desc, img, rotate }) => {
 }
 
 export default React.memo(Offer)
+
+
+Offer.propTypes ={ 
+    title:PropTypes.string.isRequired,
+    desc:PropTypes.string.isRequired,
+    img:PropTypes.string.isRequired,
+    rotate:PropTypes.string.isRequired,
+}

@@ -1,5 +1,5 @@
 import { Box, Button } from "@mui/material";
-import styled, { css } from "styled-components";
+import styled, { css,keyframes } from "styled-components";
 import Image from "../Image";
 
 
@@ -74,6 +74,21 @@ export const ButtonOutline = styled(Button).attrs(() => ({
 
     }
 `
+
+
+
+const rotateImg = keyframes`
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360);
+  }
+  
+`;
+
+
 export const AdImage = styled(Image).attrs(()=>({
     width: 700,
     height:650,
@@ -81,4 +96,7 @@ export const AdImage = styled(Image).attrs(()=>({
 position: absolute;
 top: -5%;
 left: -15%;
+animation: ${rotateImg} 4s linear infinite alternate;
+
 `
+

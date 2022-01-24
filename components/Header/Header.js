@@ -15,7 +15,6 @@ const Header = (props) => {
 
     const {pathname} = useRouter()
 
-
     let { t } = useTranslation();
 
     let [open, setOpen] = useState(false);
@@ -23,6 +22,11 @@ const Header = (props) => {
     const handleClick = () => {
         setOpen(!open)
     }
+
+    const isBottom = () => {
+        return pathname === "/" ? "true" : "false"
+    }
+
     const renderHeaderBottom = () => {
         if(pathname === "/"){
             return (
@@ -51,10 +55,6 @@ const Header = (props) => {
             </HeaderStyled.Bottom>
             )
         }
-    }
-
-    const isBottom = () => {
-        return pathname === "/" ? "true" : "false"
     }
 
     return (

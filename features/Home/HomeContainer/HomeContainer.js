@@ -35,7 +35,6 @@ export const HomeContainer = () => {
         title: "Margarita",
         desc: "Lorem ipsum is placeholder  commonly used in the graphic ",
         img: "/image/pizza.png"
-
     }
     ]
 
@@ -47,8 +46,6 @@ export const HomeContainer = () => {
         title: "Yummy Always Papa John’s Pizza.Agree?",
         desc: "Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.",
         img: "/image/sendvic.png"
-        
-        
     }, {
         title: "Do You Like French Fries? Mmm...",
         desc: "Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.",

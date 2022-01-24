@@ -1,7 +1,8 @@
 import { Fragment } from "react"
-import TypographyText from "../../../components/Typograph"
+import TypographyText from "../../../../components/Typograph"
 import { CardCol, InfoTop } from "./Info.styled"
-import InfoCard from "../../../components/Card/InfoCard"
+import PropTypes from 'prop-types';
+import InfoCard from "../../../../components/Card/InfoCard"
 
 
 export const Info = ({ title, desc, cards }) => {
@@ -21,4 +22,10 @@ export const Info = ({ title, desc, cards }) => {
             )}
         </Fragment>
     )
+}
+
+Info.propTypes ={ 
+    title:PropTypes.string.isRequired,
+    desc:PropTypes.string.isRequired,
+    cards:PropTypes.array.isRequired,
 }

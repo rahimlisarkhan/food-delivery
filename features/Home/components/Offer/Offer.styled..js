@@ -1,5 +1,5 @@
 import { Grid ,Box} from "@mui/material";
-import Image from "../../../components/Image";
+import Image from "../../../../components/Image";
 import styled from "styled-components";
 
 
