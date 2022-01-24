@@ -20,20 +20,11 @@ export const CategoryContent = () => {
         },
     ]
 
-    const { pathname} = useRouter()
-
-    const isActive = () => {
-        if (pathname === "/restaurants" || pathname === `/restaurants/${slug}`) {
-            return "true"
-        }
-        return "false"
-    }
-
     return (
         <CategoryContentStyled>
-            <CategoryCard title="All" active={isActive()} />
+            <CategoryCard title="All"/>
             {categoryData?.map(category => <CategoryCard key={`categiry-id-${category.id}`} {...category} 
-                                            active={isActive()} />)}
+                                           />)}
         </CategoryContentStyled>
     )
 }

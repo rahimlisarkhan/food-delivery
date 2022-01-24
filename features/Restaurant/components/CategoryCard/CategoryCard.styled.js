@@ -21,6 +21,12 @@ export const CategoryCardStyled = styled(Box)`
     align-items: center;
     margin-top:30px ;
     cursor:pointer;
+
+    transition:all .2s;
+
+&:hover{
+    background-color: ${({theme})=>theme.colors.mainRedLight};
+}
 `
 
 export const CategoryImage = styled(Image).attrs(()=>({
@@ -37,6 +43,8 @@ export const CategoryTitle = styled(Typography).attrs(({active})=>({
     color:active === "true" ? "red" : "dark"
 }))`
 margin:0 17px !important;
+
+
 `
 
 
