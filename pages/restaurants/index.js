@@ -3,7 +3,7 @@ import Head from 'next/head'
 import { Fragment } from 'react'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Layout from '../../components/Layout';
-import HomeContainer from '../../features/Home/HomeContainer';
+import RestaurantContainer from '../../features/Restaurant/RestaurantContainer';
 
 export default function Home() {
 
@@ -16,7 +16,7 @@ export default function Home() {
         <title> {t("restaurants")} | Foody Delivery</title>
       </Head>
       <Layout>
-        <h1>Restaurant</h1>
+        <RestaurantContainer/>
       </Layout>
     </Fragment>
   )

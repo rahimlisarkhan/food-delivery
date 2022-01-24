@@ -67,7 +67,6 @@ export const HomeContainer = () => {
             <Info title={t("features")} desc={t("features desc")} cards={infoCards} />
             {renderOffer()}
             <Info title={t("out popular")} desc={t("features desc")} cards={offerCards} />
-
         </Fragment>
     )
 }

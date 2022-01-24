@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 
 export const FooterContent = styled.footer`
-height:658px;
+height:${({height})=> height==="true" ? "658px":"400px"} ;
 display:flex;
 flex-direction:column;
 align-items:center;

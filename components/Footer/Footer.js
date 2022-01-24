@@ -17,8 +17,13 @@ export const Footer = () => {
         }
     }
 
+    
+    const isTop = () => {
+        return pathname === "/" ? "true" : "false"
+    }
+
     return(
-        <FooterContent>
+        <FooterContent height={isTop()}>
             {renderFooterTop()}
             <FooterBottom/>
         </FooterContent>
