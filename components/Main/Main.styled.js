@@ -9,5 +9,5 @@ export const MainStyled = styled(Grid).attrs(()=>({
     spacing:3
 }))`
     padding:${({theme})=>theme.boxModel.padding.normal} 25px;
-
+    min-height:100vh;
 `

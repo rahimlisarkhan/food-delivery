@@ -1,17 +1,20 @@
-import { RestaurantContentStyled,RestaurantList } from "./RestaurantContent.styled"
+import { RestaurantContentStyled, RestaurantList } from "./RestaurantContent.styled"
 import RestaurantCard from "../RestaurantCard"
+import Paginations from "../../../../components/Pagination";
 
-export const RestaurantContent = () => {
+export const RestaurantContent = ({ restaurantData, handlePages, pagesCount }) => {
+
+
+
     return (
         <RestaurantContentStyled>
             <RestaurantList>
-                <RestaurantCard />
-                <RestaurantCard />
-                <RestaurantCard />
-                <RestaurantCard />
-                <RestaurantCard />
-                <RestaurantCard />
+                {restaurantData?.map(restaurant => <RestaurantCard 
+                                                        key={`restaurant-id-${restaurant.id}`} 
+                                                        {...restaurant} />)}
             </RestaurantList>
+            <Paginations count={pagesCount} onPages={handlePages} />
+
         </RestaurantContentStyled>
     )
 }

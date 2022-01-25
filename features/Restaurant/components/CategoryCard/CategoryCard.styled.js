@@ -6,27 +6,19 @@ import Typography from "../../../../components/Typograph"
 
 
 export const CategoryCardStyled = styled(Box)`
-
-    ${({active,theme})=>{
-        console.log(theme);
-        console.log(active);
-        
-    }}
-
     height: 40px;
-    background-color:${({ active }) =>  active === "true" ? "rgba(214, 54, 38, 0.1)" : "none"};
+    /* background-color:${({ active }) =>  active === "true" ? "rgba(214, 54, 38, 0.1)" : "none"}; */
     border-radius: 4px;
     padding:6px 10px;
     display: flex;
     align-items: center;
     margin-top:30px ;
     cursor:pointer;
-
     transition:all .2s;
 
-&:hover{
-    background-color: ${({theme})=>theme.colors.mainRedLight};
-}
+    &:hover{
+        background-color: ${({theme})=>theme.colors.mainRedLight};
+    }
 `
 
 export const CategoryImage = styled(Image).attrs(()=>({

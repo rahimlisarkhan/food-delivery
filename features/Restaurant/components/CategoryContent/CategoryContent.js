@@ -3,22 +3,8 @@ import { CategoryContentStyled } from "./CategoryContent.styled"
 import { useRouter } from "next/router"
 
 
-export const CategoryContent = () => {
+export const CategoryContent = ({categoryData}) => {
 
-    const categoryData = [
-        {
-            id: "001",
-            slug: "fast-food",
-            title: "Fast Food",
-            img_url: "/image/sendvic.png"
-        },
-        {
-            id: "002",
-            slug: "pizza",
-            title: "Pizza",
-            img_url: "/image/pizza.png"
-        },
-    ]
 
     return (
         <CategoryContentStyled>

@@ -14,7 +14,7 @@ const Dropdown = () => {
     const [open, setOpen] = React.useState(false);
     const anchorRef = React.useRef(null);
     const [selectedIndex, setSelectedIndex] = React.useState(0);
-    const { pathname, locale,replace } = useRouter()
+    const { asPath, locale, replace } = useRouter()
 
     let options = React.useMemo(() => [
         { flag: "/image/flag/en.png", lang: 'en' },
@@ -23,7 +23,7 @@ const Dropdown = () => {
     ], [])
 
     const handleLocaleChange = (lang) => {
-       replace(pathname, pathname, { locale: lang })
+        replace(asPath, asPath, { locale: lang })
     }
 
     React.useEffect(() => {
@@ -53,7 +53,7 @@ const Dropdown = () => {
         <React.Fragment>
             <ButtonGroup variant="text" ref={anchorRef} aria-label="split button">
                 <Button onClick={handleToggle}>
-                    <Image 
+                    <Image
                         radius="100"
                         width="40"
                         height="40"

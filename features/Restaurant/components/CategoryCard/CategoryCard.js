@@ -3,19 +3,19 @@ import { CategoryCardStyled,CategoryImage,CategoryTitle } from "./CategoryCard.s
 
 export const CategoryCard = ({title,active,slug}) => {
 
-    const { push,asPath } = useRouter()
+    const { push,query } = useRouter()
 
     const isActive = () => {
-        if (asPath === `/restaurants/${slug}`) {
+        if (query.category === slug) {
             return "true"
-        }else if (asPath === `/restaurants` && !slug){
+        }else if (!query.category && !slug){
             return "true"
         }
         return "false"
     }
 
     const categoryPush = () =>{
-        let path = slug ? `/restaurants/${slug}` : "/restaurants"
+        let path = slug ? `/restaurants/restaurant/?category=${slug}` : "/restaurants"
         push(path)
     }
 

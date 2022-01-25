@@ -4,34 +4,35 @@ import Button from '../../../../components/Button';
 import TypographyText from '../../../../components/Typograph';
 import * as Style from './RestaurantCard.styled';
 
-export const RestaurantCard = ({ id, name, price, img_url, restaurant }) => {
+export const RestaurantCard = ({ name, delivery_price, delivery_min, img_url, cuisine, category, slug }) => {
 
-  let { push, asPath } = useRouter()
+  let { push, asPath, query } = useRouter()
 
-  console.log(asPath);
   const openRestaurant = () => {
-    push(asPath + "/burger-king")
+    let path = query.category ? asPath + `&name=${slug}` : asPath + `/restaurant/?name=${slug}`
+    push(path)
+
   }
 
   return (
     <Style.Card onClick={openRestaurant}>
       <Style.CardImage
-        image={"https://logowik.com/content/uploads/images/310_burgerking.jpg"}
-        alt="pizza"
+        image={img_url}
+        alt={name}
       />
       <Style.CardContentStyled>
         <TypographyText font="22" color="dark" bold="true">
-          Burger King
+          {name}
         </TypographyText>
         <TypographyText font="16" color="gray">
-          chinese, sea-food, thai, lebanese, caribbean
+          {cuisine}
         </TypographyText>
       </Style.CardContentStyled>
       <Style.CardActionsStyled>
-        <TypographyText font="16" bold="true">
-          $1 Delivery
+        <TypographyText font="15" bold="true">
+          {delivery_price ? `$${delivery_price}` : "Free"} Delivery
         </TypographyText>
-        <Button>30 Min</Button>
+        <Button>{delivery_min} Min</Button>
       </Style.CardActionsStyled>
     </Style.Card>
 
