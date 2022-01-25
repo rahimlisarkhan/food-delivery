@@ -7,9 +7,10 @@ export const OfferContent = styled(Grid).attrs(()=>({
     container:true,
 }))`
 display: flex;
-flex-direction: ${({rotate})=> !rotate ? "row" : "row-reverse"} !important;
+/* flex-direction: ${({rotate})=> rotate === "false" ? "row" : "row-reverse"}; */
+flex-direction:row-reverse !important;
 margin-top:200px !important;
-    justify-content: center !important;
+    /* justify-content: center !important; */
 `
 
 
@@ -32,13 +33,12 @@ display:flex;
 justify-content: center;
 align-items: center;
 background-color:${({theme})=>theme.colors.mainRed};
-transform:${({rotate})=> !rotate ? "rotate(-150deg)" : "rotate(150deg)"}
+transform:${({rotate})=> rotate === "false" ? "rotate(-150deg)" : "rotate(150deg)"}
 `
 
 export const OfferImage = styled(Image).attrs(()=>({
-    width: 836,
     height: 740
     
 }))`
-transform:${({rotate})=> !rotate ? "rotate(150deg)" : "rotate(-150deg)"};
+transform:${({rotate})=> rotate === "false" ? "rotate(150deg)" : "rotate(-150deg)"};
 `

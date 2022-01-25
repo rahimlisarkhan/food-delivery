@@ -7,7 +7,7 @@ import Typography from "../../../../components/Typograph"
 
 export const CategoryCardStyled = styled(Box)`
     height: 40px;
-    /* background-color:${({ active }) =>  active === "true" ? "rgba(214, 54, 38, 0.1)" : "none"}; */
+    background-color:${({ active }) =>  active === "true" ? "rgba(214, 54, 38, 0.1)" : "none"};
     border-radius: 4px;
     padding:6px 10px;
     display: flex;
@@ -34,7 +34,7 @@ export const CategoryTitle = styled(Typography).attrs(({active})=>({
     font:"20",
     color:active === "true" ? "red" : "dark"
 }))`
-margin:0 17px !important;
+margin:0 5px !important;
 
 
 `

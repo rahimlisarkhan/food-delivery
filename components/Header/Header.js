@@ -49,8 +49,8 @@ const Header = (props) => {
                 <HeaderStyled.BottomImage>
                     <HeaderStyled.AdImage src="/image/sendvic.png" alt="sendic" />
                     <YummyCard title="Yummy sendvic" img="/image/sendvic.png" top="400" left="-105" />
-                    {/* <YummyCard title="Yummy pizza" img="/image/pizza.png" top="240" left="435" />
-                    <YummyCard title="Yummy french fries" img="/image/fries.png" top="40" left="-35" /> */}
+                    <YummyCard title="Yummy pizza" img="/image/pizza.png" top="240" left="435" />
+                    <YummyCard title="Yummy french fries" img="/image/fries.png" top="40" left="-35" />
                 </HeaderStyled.BottomImage>
             </HeaderStyled.Bottom>
             )

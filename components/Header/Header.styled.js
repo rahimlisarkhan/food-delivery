@@ -90,7 +90,6 @@ const rotateImg = keyframes`
 
 
 export const AdImage = styled(Image).attrs(()=>({
-    width: 700,
     height:650,
 }))`
 position: absolute;

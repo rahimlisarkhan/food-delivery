@@ -11,7 +11,6 @@ export const RestaurantCard = ({ name, delivery_price, delivery_min, img_url, cu
   const openRestaurant = () => {
     let path = query.category ? asPath + `&name=${slug}` : asPath + `/restaurant/?name=${slug}`
     push(path)
-
   }
 
   return (

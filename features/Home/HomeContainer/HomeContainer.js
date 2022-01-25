@@ -58,7 +58,7 @@ export const HomeContainer = () => {
             if (index % 2 !== 0) {
                 return <Offer key={`offer-id-${index}`} rotate={"true"}  {...offer} />
             }
-            return <Offer key={`offer-id-${index}`}  {...offer} />
+            return <Offer key={`offer-id-${index}`} rotate={"false"}   {...offer} />
         })
     }
 
