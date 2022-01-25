@@ -20,11 +20,11 @@ justify-content: center;
     }
 
     & .Mui-selected{
-        background-color:${({theme})=>theme.colors.mainRed};
-        color:${({theme})=>theme.colors.white};
+        background-color:${({theme})=>theme.colors.mainRed} !important;
+        color:${({theme})=>theme.colors.white} !important;
 
         &:hover{
-        background-color:${({theme})=>theme.colors.textGreenLight};
+        background-color:${({theme})=>theme.colors.textGreenLight} !important;
 
         }
     }

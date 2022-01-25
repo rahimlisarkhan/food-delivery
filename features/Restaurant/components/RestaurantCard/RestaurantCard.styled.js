@@ -19,7 +19,7 @@ export const Card = styled(Grid).attrs(()=>({
     m:3
 }))`
 max-width:235px;
-height: 346px;
+height: 346px !important;
 background-color: ${({theme})=>theme.colors.white};
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
  transition: all .2s;

@@ -7,7 +7,6 @@ export const MenuHeaderStyled = styled(Grid).attrs(() => ({
     md: 12
 }))`
 height:540px;
-padding: 0;
 `
 
 export const MenuImage = styled(Image).attrs(() => ({
@@ -27,6 +26,9 @@ export const MenuInfo = styled(Box)`
 height: 90px;
 padding:20px;
 display:flex;
+border-bottom:1px solid ;
+padding-bottom:20px !important;
+
 justify-content:space-between;
 `
 

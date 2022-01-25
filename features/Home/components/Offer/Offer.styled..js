@@ -37,7 +37,7 @@ transform:${({rotate})=> rotate === "false" ? "rotate(-150deg)" : "rotate(150deg
 `
 
 export const OfferImage = styled(Image).attrs(()=>({
-    height: 740
+    height: 540
     
 }))`
 transform:${({rotate})=> rotate === "false" ? "rotate(150deg)" : "rotate(-150deg)"};

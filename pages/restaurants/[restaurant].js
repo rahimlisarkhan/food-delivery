@@ -5,7 +5,6 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Layout from '../../components/Layout';
 import dynamic from 'next/dynamic'
 import { useRouter } from 'next/router';
-import { useRouter as Test } from 'next/router';
 
 const RestaurantContainer = dynamic(() => import('../../features/Restaurant/RestaurantContainer'))
 const MenuContainer = dynamic(() => import('../../features/Restaurant/MenuContainer'))
@@ -35,7 +34,6 @@ export default function RestaurantSlug() {
     </Fragment>
   )
 }
-
 
 export async function getServerSideProps({ locale }) {
   return {

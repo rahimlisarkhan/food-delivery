@@ -1,5 +1,8 @@
 import { Fragment } from "react"
 import MenuHeader from "../components/MenuHeader"
+import ProductsContent from "../components/ProductsContent"
+import BasketContent from "../components/BasketContent"
+
 
 export const MenuContainer = () => {
 
@@ -23,6 +26,11 @@ export const MenuContainer = () => {
     return (
         <Fragment>
             <MenuHeader {...restaurantData} />
+            <ProductsContent>
+            </ProductsContent>
+            <BasketContent>
+
+            </BasketContent>
         </Fragment>
     )
 }
