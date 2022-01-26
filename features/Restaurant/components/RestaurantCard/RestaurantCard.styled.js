@@ -1,26 +1,29 @@
 
 
-import { Button, CardActions, CardContent, Grid } from '@mui/material';
-import CardMedia from '@mui/material/CardMedia';
+import { Button, CardActions, CardContent, Grid, Card, CardMedia } from '@mui/material';
 import styled, { css } from 'styled-components'
 
 
 
 export const CardContentStyled = styled(CardContent)`
-    ${({theme})=>css`
+    ${({ theme }) => css`
         padding: 0 16px
     `}
-
+`
+export const CardCol = styled(Grid).attrs(() => ({
+    item: true,
+    xs:6,
+    md: 4,
+    lg:3
+}))`
 `
 
-export const Card = styled(Grid).attrs(()=>({
-    item:true,
-    md:3,
-    m:3
-}))`
-width:235px !important;
-height: 346px !important;
-background-color: ${({theme})=>theme.colors.white};
+export const CardStyled = styled(Card)`
+min-width:235px;
+height: 345px;
+margin: 0 0 40px 40px;
+padding:17px 0;
+background-color: ${({ theme }) => theme.colors.white};
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
  transition: all .2s;
      cursor: pointer;
@@ -30,8 +33,8 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 `
 
 
-export const CardImage = styled(CardMedia).attrs(()=>({
-    component:"img",
+export const CardImage = styled(CardMedia).attrs(() => ({
+    component: "img",
 }))`
     width: 100%;
     height:160px;

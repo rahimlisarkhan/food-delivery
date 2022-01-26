@@ -17,7 +17,7 @@ const Offer = ({ title, desc, img, rotate }) => {
             </OfferInfo>
             <OfferInfo>
                 <OfferBox rotate={rotate}>
-                    <OfferImage width="500"  rotate={rotate} src={img} alt="offer" />
+                    <OfferImage rotate={rotate} src={img} alt="offer" />
                 </OfferBox>
             </OfferInfo>
         </OfferContent>

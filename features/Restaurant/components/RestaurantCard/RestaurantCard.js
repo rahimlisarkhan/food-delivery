@@ -14,26 +14,27 @@ export const RestaurantCard = ({ name, delivery_price, delivery_min, img_url, cu
   }
 
   return (
-    <Style.Card onClick={openRestaurant}>
-      <Style.CardImage
-        image={img_url}
-        alt={name}
-      />
-      <Style.CardContentStyled>
-        <TypographyText font="22" color="dark" bold="true">
-          {name}
-        </TypographyText>
-        <TypographyText font="16" color="gray">
-          {cuisine}
-        </TypographyText>
-      </Style.CardContentStyled>
-      <Style.CardActionsStyled>
-        <TypographyText font="15" bold="true">
-          {delivery_price ? `$${delivery_price}` : "Free"} Delivery
-        </TypographyText>
-        <Button>{delivery_min} Min</Button>
-      </Style.CardActionsStyled>
-    </Style.Card>
-
+    <Style.CardCol>
+      <Style.CardStyled onClick={openRestaurant}>
+        <Style.CardImage
+          image={img_url}
+          alt={name}
+        />
+        <Style.CardContentStyled>
+          <TypographyText font="22" color="dark" bold="true">
+            {name}
+          </TypographyText>
+          <TypographyText font="16" color="gray">
+            {cuisine}
+          </TypographyText>
+        </Style.CardContentStyled>
+        <Style.CardActionsStyled>
+          <TypographyText font="15" bold="true">
+            {delivery_price ? `$${delivery_price}` : "Free"} Delivery
+          </TypographyText>
+          <Button>{delivery_min} Min</Button>
+        </Style.CardActionsStyled>
+      </Style.CardStyled>
+    </Style.CardCol>
   );
 }

@@ -17,6 +17,12 @@ justify-content: center;
         border-radius: 50%;
         color:${({theme})=>theme.colors.mainRed};
         border-color:${({theme})=>theme.colors.mainRed};
+
+        &:hover{
+            border-color:${({theme})=>theme.colors.textGreenLight} !important;
+        background-color:${({theme})=>theme.colors.textGreenLight} !important;
+        color:${({theme})=>theme.colors.white} !important;
+        }
     }
 
     & .Mui-selected{
@@ -25,9 +31,8 @@ justify-content: center;
 
         &:hover{
         background-color:${({theme})=>theme.colors.textGreenLight} !important;
-
         }
     }
-    
+
     
 `

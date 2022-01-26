@@ -7,10 +7,8 @@ export const OfferContent = styled(Grid).attrs(()=>({
     container:true,
 }))`
 display: flex;
-/* flex-direction: ${({rotate})=> rotate === "false" ? "row" : "row-reverse"}; */
-flex-direction:row-reverse !important;
+flex-direction: ${({rotate})=> rotate === "false" ? "row" : "row-reverse"};
 margin-top:200px !important;
-    /* justify-content: center !important; */
 `
 
 
@@ -25,10 +23,9 @@ align-items: center !important;
 
 
 export const OfferBox = styled(Box)`
-width:420px;
-height: 500px;
+width:300px;
+height: 350px;
 border-radius:50px;
-position:relative;
 display:flex;
 justify-content: center;
 align-items: center;
@@ -37,8 +34,8 @@ transform:${({rotate})=> rotate === "false" ? "rotate(-150deg)" : "rotate(150deg
 `
 
 export const OfferImage = styled(Image).attrs(()=>({
-    height: 540
-    
+    width: 400,
+    height: 400
 }))`
 transform:${({rotate})=> rotate === "false" ? "rotate(150deg)" : "rotate(-150deg)"};
 `

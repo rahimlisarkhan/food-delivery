@@ -29,7 +29,7 @@ export const MenuContainer = () => {
             <ProductsContent>
             </ProductsContent>
             <BasketContent>
-
+        
             </BasketContent>
         </Fragment>
     )
