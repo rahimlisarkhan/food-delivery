@@ -25,10 +25,12 @@ export default function Restaurants() {
 }
 
 
-export async function getStaticProps({ locale }) {
-  return {
-    props: {
-      ...(await serverSideTranslations(locale, ['common', 'menu'])),
-    },
-  };
-}
+export async function getServerSideProps({ locale }) {
+  let languages = { ...await serverSideTranslations(locale, ['common', 'menu']) }
+ 
+   return {
+     props: {
+      ...languages
+     },
+   };
+ }

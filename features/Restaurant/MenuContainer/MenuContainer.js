@@ -26,11 +26,8 @@ export const MenuContainer = () => {
     return (
         <Fragment>
             <MenuHeader {...restaurantData} />
-            <ProductsContent>
-            </ProductsContent>
-            <BasketContent>
-        
-            </BasketContent>
+            <ProductsContent/>
+            <BasketContent/>
         </Fragment>
     )
 }

@@ -16,17 +16,19 @@ export default function Home() {
         <title> {t("home")} | Foody Delivery</title>
       </Head>
       <Layout>
-        <HomeContainer/>
+        <HomeContainer />
       </Layout>
     </Fragment>
   )
 }
 
 
-export async function getStaticProps({ locale }) {
+export async function getServerSideProps({ locale }) {
+  let languages = { ...await serverSideTranslations(locale, ['common', 'menu']) }
+
   return {
     props: {
-      ...(await serverSideTranslations(locale, ['common', 'menu'])),
+      ...languages
     },
   };
 }
