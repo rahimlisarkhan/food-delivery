@@ -83,7 +83,7 @@ const Dropdown = () => {
                                             selected={index === selectedIndex}
                                             onClick={() => handleMenuItemClick(lang, index)}
                                         >
-                                            <Image cover radius="100" width="40" height="40" src={flag} alt="flag" />
+                                            <Image cover="true" radius="100" width="40" height="40" src={flag} alt="flag" />
                                         </MenuItem>
                                     ))}
                                 </MenuList>
