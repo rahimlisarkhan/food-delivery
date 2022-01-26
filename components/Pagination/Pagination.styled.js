@@ -6,10 +6,9 @@ import { Grid } from "@mui/material"
 
 export const PaginationContent = styled(Grid).attrs(()=>({
     container:true,
-    spacing:1
 }))`
 justify-content: center;
-    margin-top:30px;
+    margin-top:30px !important;
     & button{
         width:64px;
         height:64px;

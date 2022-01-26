@@ -7,7 +7,7 @@ import styled, { css } from 'styled-components'
 
 export const CardContentStyled = styled(CardContent)`
     ${({ theme }) => css`
-        padding: 0 16px
+        padding: 0 16px !important;
     `}
 `
 export const CardCol = styled(Grid).attrs(() => ({
@@ -24,14 +24,13 @@ height: 345px;
 margin: 0 0 40px 40px;
 padding:17px 0;
 background-color: ${({ theme }) => theme.colors.white};
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
- transition: all .2s;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)!important;
+ transition: all .2s !important;
      cursor: pointer;
      &:hover{
          transform: scale(.98);
      }
 `
-
 
 export const CardImage = styled(CardMedia).attrs(() => ({
     component: "img",
