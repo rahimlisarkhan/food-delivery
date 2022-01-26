@@ -58,6 +58,7 @@ const Dropdown = () => {
                         width="40"
                         height="40"
                         alt="flag"
+                        cover="true"
                         src={options[selectedIndex]?.flag} />
                 </Button>
             </ButtonGroup>
