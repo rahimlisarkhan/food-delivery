@@ -6,7 +6,7 @@ export const MenuHeaderStyled = styled(Grid).attrs(() => ({
     item: true,
     md: 12
 }))`
-height:540px;
+height:600px;
 `
 
 export const MenuImage = styled(Image).attrs(() => ({
@@ -15,7 +15,6 @@ export const MenuImage = styled(Image).attrs(() => ({
 height: 450px;
 
 `
-
 export const MenuContent = styled(Box)`
 display:flex;
 justify-content:space-between;
@@ -24,10 +23,9 @@ justify-content:space-between;
 
 export const MenuInfo = styled(Box)`
 height: 90px;
-padding:20px;
+padding:5px 20px;
 display:flex;
-border-bottom:1px solid ;
-padding-bottom:20px !important;
+border-bottom:1px solid ${({theme})=>theme.colors.whiteLight};
 
 justify-content:space-between;
 `

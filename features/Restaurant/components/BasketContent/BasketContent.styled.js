@@ -4,16 +4,18 @@ import styled from "styled-components"
 
 export const BasketContentStyled = styled(Grid).attrs(()=>({
     item:true,
-    md:4,
-    spacing:0
+    md:3,
 }))`
-    margin-top:25px !important;
+    display: flex;
+    justify-content: flex-end;
     height: 800px;
 `
 
 export const BasketStyled = styled(Box)`
     position: sticky;
-    top: 0;
+    top:0;
+    right:0;
+    width: 400px;
     height: 547px;
     background-color:${({theme})=>theme.colors.whiteLight1};
     border-radius: 4px;

@@ -1,7 +1,7 @@
 import { useTranslation } from 'next-i18next';
 import Head from 'next/head'
 import { Fragment } from 'react'
-// import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Layout from '../../components/Layout';
 import dynamic from 'next/dynamic'
 import { useRouter } from 'next/router';
@@ -38,10 +38,12 @@ export default function RestaurantSlug(props) {
 }
 
 export async function getServerSideProps({ locale }) {
+ let a = { ...await serverSideTranslations(locale, ['common', 'menu']) }
+
   return {
     props: {
-     test:"test"
+     test:"test",
+     ...a
     },
   };
 }
-// ...(await serverSideTranslations(locale, ['common', 'menu'])),

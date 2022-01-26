@@ -8,5 +8,5 @@ export const MainStyled = styled(Grid).attrs(()=>({
     container:true,
 }))`
     display: flex;
-    justify-content: space-between;
+    min-height: 100vh;
 `

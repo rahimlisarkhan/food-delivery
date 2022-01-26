@@ -1,6 +1,7 @@
 import { Fragment } from 'react'
 import {AppProvider} from "../app/AppProvider"
 import Head from 'next/head'
+import nextI18NextConfig from '../next-i18next.config.js'
 import { appWithTranslation } from 'next-i18next';
 
 const MyApp = ({ Component, pageProps }) => {
@@ -17,4 +18,4 @@ const MyApp = ({ Component, pageProps }) => {
   )
 }
 
-export default appWithTranslation(MyApp);
+export default appWithTranslation(MyApp,nextI18NextConfig);

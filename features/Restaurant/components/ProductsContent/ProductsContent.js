@@ -1,11 +1,13 @@
-import { ProductsContentStyled } from "./ProductsContent.styled"
+import { ProductsContentStyled, ProductsStyled } from "./ProductsContent.styled"
 
 
 
 export const ProductsContent = () => {
    return(
         <ProductsContentStyled>
-            Products
+            <ProductsStyled>
+                Products
+            </ProductsStyled>
         </ProductsContentStyled>
    ) 
 }
