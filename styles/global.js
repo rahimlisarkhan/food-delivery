@@ -33,5 +33,45 @@ const GlobalStyle = createGlobalStyle`
 *::-webkit-scrollbar-thumb:hover {
   background:  ${colors.mainRed}; 
 }
+
+/* Make clicks pass-through */
+#nprogress {
+    pointer-events: none;
+  }
+  
+  #nprogress .bar {
+    background: linear-gradient(180deg, ${colors.mainRed} 0%, ${colors.mainRed} 100%);
+    position: fixed;
+    z-index: 1300;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+  }
+  
+  /* Fancy blur effect */
+  #nprogress .peg {
+    display: block;
+    position: absolute;
+    right: 0px;
+    width: 100px;
+    height: 100%;
+    box-shadow: 0 0 10px ${colors.mainRed}, 0 0 5px ${colors.mainRed};
+    opacity: 1;
+  
+    -webkit-transform: rotate(3deg) translate(0px, -4px);
+    -ms-transform: rotate(3deg) translate(0px, -4px);
+    transform: rotate(3deg) translate(0px, -4px);
+  }
+  
+  .nprogress-custom-parent {
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .nprogress-custom-parent #nprogress .bar {
+    position: absolute;
+  }
+
 `;
 export default GlobalStyle

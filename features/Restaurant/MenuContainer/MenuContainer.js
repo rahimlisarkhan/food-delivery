@@ -20,7 +20,7 @@ export const MenuContainer = () => {
             title: "Pizza",
             img_url: "/image/pizza.png"
         },
-        img_url: "https://media-cdn.tripadvisor.com/media/photo-s/1a/fe/be/14/papa-john-s-azerbaijan.jpg"
+        img_url: "https://media-cdn.tripadvisor.com/media/photo-s/19/f5/62/cb/papa-john-s-pizza.jpg"
     }
     
     return (

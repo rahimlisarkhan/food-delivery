@@ -1,16 +1,7 @@
 import { Fragment } from 'react'
 import {AppProvider} from "../app/AppProvider"
 import Head from 'next/head'
-import Router from 'next/router'
-import NProgress from 'nprogress'
 import { appWithTranslation } from 'next-i18next';
-
-
-Router.events.on('routeChangeStart', (url) => {
-  NProgress.start()
-})
-Router.events.on('routeChangeComplete', () => NProgress.done())
-Router.events.on('routeChangeError', () => NProgress.done())
 
 const MyApp = ({ Component, pageProps }) => {
   return (
