@@ -21,6 +21,7 @@ export const Navbar = () => {
         <Fragment>
             <NavList>
                 {Object.values(router.menu)
+                    .filter(item => item.href !== "/login")
                     .map(nav => <NavItem active={isActive(nav.href)}
                         key={`nav-${nav.id}`}
                         href={nav.href}

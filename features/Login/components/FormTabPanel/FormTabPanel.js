@@ -9,6 +9,7 @@ import Box from '@mui/material/Box';
 import { TabStyled, TabsStyled } from "./FormTabPanel.styled"
 import LoginForm from '../LoginForm';
 import { FORM } from '../../../../util/form';
+import { useTranslation } from 'next-i18next';
 
 const TabPanel = ({ children, value, index, ...other }) => {
 
@@ -44,6 +45,7 @@ const a11yProps = (index) => {
 
 export const FormTabPanel = ({ setChange }) => {
   const [value, setValue] = React.useState(0);
+  const { t } = useTranslation();
 
   const handleChange = (event, newValue) => {
     console.log(newValue);
@@ -54,15 +56,15 @@ export const FormTabPanel = ({ setChange }) => {
     <Box >
       <Box >
         <TabsStyled value={value} onChange={handleChange} aria-label="basic tabs example">
-          <TabStyled label="Login" {...a11yProps(0)} />
-          <TabStyled label="Register" {...a11yProps(1)} />
+          <TabStyled label={t("login")} {...a11yProps(0)} />
+          <TabStyled label={t("signup")} {...a11yProps(1)} />
         </TabsStyled>
       </Box>
       <TabPanel value={value} index={0}>
-        <LoginForm {...FORM.LOGIN} />
+        <LoginForm {...FORM.LOGIN} changeButton={value}/>
       </TabPanel>
       <TabPanel value={value} index={1}>
-        <LoginForm {...FORM.SIGNUP} />
+        <LoginForm {...FORM.SIGNUP} changeButton={value} />
       </TabPanel>
     </Box>
   );

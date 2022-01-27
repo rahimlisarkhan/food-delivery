@@ -4,7 +4,7 @@ import { VisibilityOff, Visibility } from '@mui/icons-material';
 import { useTranslation} from "next-i18next"
 import { useState } from "react";
 
-export const LoginForm = ({ initialValues, inputs }) => {
+export const LoginForm = ({ initialValues, inputs,changeButton }) => {
 
     let [visible, setVisible] = useState(false)
     const { t } = useTranslation();
@@ -24,7 +24,6 @@ export const LoginForm = ({ initialValues, inputs }) => {
         if (!values.password) {
             errors.password = "Reuqired password"
         }
-
 
         return errors
     }
@@ -86,27 +85,8 @@ export const LoginForm = ({ initialValues, inputs }) => {
                             return false
                     }
                 })}
-                {/* <FormGroupStyled>
-                    <FormLabel htmlFor="my-input">Username</FormLabel>
-                    <FormField name="username"
-                        onChange={formik.handleChange}
-                        value={formik.values.username}
-                    />
-                    {formik.errors.username && <FormError>{formik.errors.username}</FormError>}
-                </FormGroupStyled> */}
-                {/* <FormGroupStyled>
-                    <FormLabel htmlFor="my-input">Password</FormLabel>
-                    <FormField type={visible ? "text" : "password"}
-                        name="password"
-                        onChange={formik.handleChange}
-                        value={formik.values.password}
-                    />
-                    {formik.errors.password && <FormError>{formik.errors.password}</FormError>}
-                    <FormPasswordEye onClick={handleVisible}>
-                        {visible ? <VisibilityOff /> : <Visibility />}
-                    </FormPasswordEye>
-                </FormGroupStyled> */}
-                <FormSubmit>Log in</FormSubmit>
+    
+                <FormSubmit>{!changeButton ? t("login") : t("signup")}</FormSubmit>
             </FormStyled>
 
         </LoginFormContent>

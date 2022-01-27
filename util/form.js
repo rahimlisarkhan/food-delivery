@@ -32,7 +32,7 @@ export const FORM = {
             {   
                 id:"001",
                 label:"fullName",
-                name:"username",
+                name:"fullName",
                 type:"text"
             },
             {   

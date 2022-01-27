@@ -3,11 +3,12 @@ import Head from 'next/head'
 import { Fragment } from 'react'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import dynamic from 'next/dynamic'
+import NotFoundContainer from '../../features/NotFound/NotFoundContainer';
 
-const LoginContainer = dynamic(() => import('../../features/Login/LoginContainer'))
+// const NotFoundContainer = dynamic(() => import('../../features/NotFound/NotFoundContainer'))
 const Layout = dynamic(() => import('../../components/Layout'))
 
-export default function Restaurants() {
+export default function NotFoundPage() {
 
   const { t } = useTranslation();
 
@@ -18,15 +19,15 @@ export default function Restaurants() {
         <title> {t("restaurants")} | Foody Delivery</title>
       </Head>
       <Layout>
-        <LoginContainer/>
+        <NotFoundContainer/>
       </Layout>
     </Fragment>
   )
 }
 
 
-export async function getServerSideProps({ locale }) {
-  let languages = { ...await serverSideTranslations(locale, ['common', 'form']) }
+export async function getStaticProps({ locale }) {
+  let languages = { ...await serverSideTranslations(locale, ['common', 'menu']) }
  
    return {
      props: {

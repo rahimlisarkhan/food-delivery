@@ -24,5 +24,6 @@ export const colors = {
     mainRedLight:"rgba(214, 54, 38, 0.3)",
     lightPink:"#EC5CF8",
     black:"#181617",
-    blackLight:"#272727"
+    blackLight:"#272727",
+    orange:"#FFB64F"
 }
