@@ -4,8 +4,8 @@ import { Fragment } from 'react'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import dynamic from 'next/dynamic'
 
+const LoginContainer = dynamic(() => import('../../features/Login/LoginContainer'))
 const Layout = dynamic(() => import('../../components/Layout'))
-const RestaurantContainer = dynamic(() => import('../../features/Restaurant/RestaurantContainer'))
 
 export default function Restaurants() {
 
@@ -18,7 +18,7 @@ export default function Restaurants() {
         <title> {t("restaurants")} | Foody Delivery</title>
       </Head>
       <Layout>
-        <RestaurantContainer/>
+        <LoginContainer/>
       </Layout>
     </Fragment>
   )
@@ -26,7 +26,7 @@ export default function Restaurants() {
 
 
 export async function getServerSideProps({ locale }) {
-  let languages = { ...await serverSideTranslations(locale, ['common', 'menu']) }
+  let languages = { ...await serverSideTranslations(locale, ['form']) }
  
    return {
      props: {

@@ -19,6 +19,7 @@ export const colors = {
     textBlack:"#1E1E30",
     textGreenLight:"#00B2A9",
     lightRed:"#EB5757",
+    lightRed1:"#FFE7E7",
     mainRed:"#D63626",
     mainRedLight:"rgba(214, 54, 38, 0.3)",
     lightPink:"#EC5CF8",

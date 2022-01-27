@@ -1,9 +1,11 @@
 import { useTranslation } from 'next-i18next';
 import Head from 'next/head'
 import { Fragment } from 'react'
-import Layout from '../components/Layout'
-import HomeContainer from "../features/Home/HomeContainer"
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import dynamic from 'next/dynamic';
+
+const Layout = dynamic(() => import('../components/Layout'))
+const HomeContainer = dynamic(() => import('../features/Home/HomeContainer'))
 
 export default function Home() {
 

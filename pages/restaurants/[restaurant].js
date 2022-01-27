@@ -2,10 +2,10 @@ import { useTranslation } from 'next-i18next';
 import Head from 'next/head'
 import { Fragment } from 'react'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import Layout from '../../components/Layout';
 import dynamic from 'next/dynamic'
 import { useRouter } from 'next/router';
 
+const Layout = dynamic(() => import('../../components/Layout'))
 const RestaurantContainer = dynamic(() => import('../../features/Restaurant/RestaurantContainer'))
 const MenuContainer = dynamic(() => import('../../features/Restaurant/MenuContainer'))
 

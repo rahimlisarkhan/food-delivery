@@ -1,0 +1,9 @@
+{
+    "fulName":"Nom complet",
+    "e-mail":"E-mail",
+    "password":"Mot de passe",
+    "username":"Nom d'utilisateur",
+    "login": "Connexion",
+    "signup":"S'inscrire",
+    "register":"S'inscrire"
+}

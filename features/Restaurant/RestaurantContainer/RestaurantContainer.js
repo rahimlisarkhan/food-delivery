@@ -150,10 +150,10 @@ export const RestaurantContainer = () => {
             },
             img_url: "https://media-cdn.tripadvisor.com/media/photo-s/1a/fe/be/14/papa-john-s-azerbaijan.jpg"
         },
-    ]
+    ]+
 
     const handlePages = async (count) => {
-        console.log(count);
+        // console.log(count);
     }
     return(
         <Fragment>

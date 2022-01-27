@@ -4,8 +4,8 @@ import Image from "../Image";
 
 
 export const Content = styled.header`
-    ${({ theme,bottom }) => css`
-    background: ${theme.colors.whiteLight1};
+    ${({ theme,bottom,login }) => css`
+    background: ${login ==="true" ? theme.colors.lightRed : theme.colors.whiteLight1};
     padding:${theme.boxModel.padding.normal} 60px;
     margin:${theme.boxModel.margin.normal} 0;
     color:${theme.colors.grayText1} !important;
@@ -19,6 +19,7 @@ export const Content = styled.header`
 export const Top = styled.div`
     display:flex;
     align-items:center;
+    margin-top:5px;
     justify-content:space-between;
 `;
 
