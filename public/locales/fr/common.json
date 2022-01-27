@@ -3,9 +3,14 @@
     "header desc": "Lorem ipsum est un texte d'espace réservé couramment utilisé dans les secteurs du graphisme, de l'impression et de l'édition pour prévisualiser les mises en page et les maquettes visuelles.",
     "order_now": "Commander",
     "sign_up": "S'inscrire",
-    "features":"Caractéristiques",
-    "features desc":"Lorem ipsum est un espace réservé couramment utilisé dans le graphique",
+    "features": "Caractéristiques",
+    "faq1": "Paramètres généraux",
+    "faq2": "Vous n'êtes actuellement pas propriétaire",
+    "faq3": "Paramètres avancés",
+    "faq4": "Données personnelles",
+    "faqDesc1": "Nunc vitae orci ultricies, auctor nunc in, volutpat nisl. Integer sit amet egestas eros, vitae egestas augue. Duis vel est augue.",
+    "features desc": "Lorem ipsum est un espace réservé couramment utilisé dans le graphique",
     "out popular": "Notre mise à jour populaire sur les nouveaux aliments",
-    "how it works":"Comment ça marche",
-    "how it works desc":"La livraison peut être prolongée pendant les périodes de soldes. Veuillez vous référer à la page de paiement pour une estimation mise à jour pour votre emplacement. Veuillez noter qu'une fois que vous avez passé une commande, il n'est plus possible de modifier votre commande. Les taxes et les droits sont inclus dans tous les prix des produits.Il est possible de passer une commande avec expédition à une adresse différente de votre domicile ou de votre adresse de facturation lors du paiement avec une carte de crédit.Veuillez noter que les paiements Klarna nécessitent que votre commande soit expédiée à votre adresse enregistrée. adresse du domicile."
+    "how it works": "Comment ça marche",
+    "how it works desc": "La livraison peut être prolongée pendant les périodes de soldes. Veuillez vous référer à la page de paiement pour une estimation mise à jour pour votre emplacement. Veuillez noter qu'une fois que vous avez passé une commande, il n'est plus possible de modifier votre commande. Les taxes et les droits sont inclus dans tous les prix des produits.Il est possible de passer une commande avec expédition à une adresse différente de votre domicile ou de votre adresse de facturation lors du paiement avec une carte de crédit.Veuillez noter que les paiements Klarna nécessitent que votre commande soit expédiée à votre adresse enregistrée. adresse du domicile."
 }

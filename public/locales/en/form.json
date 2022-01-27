@@ -1,9 +1,9 @@
 {
-    "fullName":"Full name",
-    "email":"Email",
-    "password":"Password",
-    "username":"Username",
-    "login":"Log in",
-    "signup":"Sign up",
-    "register":"Register"
+    "fullName": "Full name",
+    "email": "Email",
+    "password": "Password",
+    "username": "Username",
+    "login": "Log in",
+    "signup": "Sign up",
+    "register": "Register"
 }

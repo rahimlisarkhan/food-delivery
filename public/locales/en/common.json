@@ -1,11 +1,17 @@
 {
-    "header title":"Our Food site makes it easy to find local food",
-    "header desc":"Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.",
-    "order_now":"Order now",
-    "sign_up":"Sign up",
-    "features":"Features",
-    "features desc":"Lorem ipsum is placeholder  commonly used in the graphic ",
-    "out popular":"Our Popular Update New Foods",
-    "how it works":"How it works",
-    "how it works desc":"Delivery may be extended during sale periods. Please refer to the checkout page for an updated estimate for your location. Kindly note that once you have placed an order, it is no longer possible to modify your order. Taxes and duties are included in all product prices.It is possible to place an order with shipment to a different address than your home or billing address when paying with a credit card. Please note that Klarna payments require that your order is shipped to your registered home address."
+    "header title": "Our Food site makes it easy to find local food",
+    "header desc": "Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.",
+    "order_now": "Order now",
+    "sign_up": "Sign up",
+    "faq1": "General settings",
+    "faq2": "You are currently not an owner",
+    "faq3": "Advanced settings",
+    "faq4": "Personal data",
+    "faqDesc1": "Nunc vitae orci ultricies, auctor nunc in, volutpat nisl. Integer sit amet egestas eros, vitae egestas augue. Duis vel est augue.",
+
+    "features": "Features",
+    "features desc": "Lorem ipsum is placeholder  commonly used in the graphic ",
+    "out popular": "Our Popular Update New Foods",
+    "how it works": "How it works",
+    "how it works desc": "Delivery may be extended during sale periods. Please refer to the checkout page for an updated estimate for your location. Kindly note that once you have placed an order, it is no longer possible to modify your order. Taxes and duties are included in all product prices.It is possible to place an order with shipment to a different address than your home or billing address when paying with a credit card. Please note that Klarna payments require that your order is shipped to your registered home address."
 }
