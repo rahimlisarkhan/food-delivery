@@ -12,15 +12,15 @@ export const FormStyled = styled.form``
 
 export const FormGroupStyled = styled(FormGroup)`
 margin-bottom: 10px;
-position: relative;
+position: relative !important;
 `
 
 
 export const FormLabel = styled(InputLabel)`
-font-size: 20px;
-font-weight: 600;
-color:${({theme})=>theme.colors.grayText2}
-margin-bottom:10px;
+font-size: 20px !important;
+font-weight: 600 !important;
+color:${({theme})=>theme.colors.grayText2} !important;
+margin-bottom:10px !important;
 `
 
 
@@ -63,8 +63,8 @@ export const FormPasswordEye = styled(ButtonEye).attrs(()=>({
     variant:"text",
 }))`
 
-position:absolute;
-top:40px;
+position:absolute !important;
+top:40px !important;
 right:0;
 svg{
     fill:${({theme})=>theme.colors.black}

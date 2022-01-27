@@ -18,7 +18,7 @@ export const TabsStyled = styled(Tabs)`
 
 export const TabStyled = styled(Tab)`
 
-font-size: 30px;
+font-size: 30px !important;
 letter-spacing: 3%;
 color:${({theme})=>theme.colors.grayText1};
 text-transform: capitalize !important;
