@@ -1,9 +1,9 @@
 {
     "fullName": "Ad Soyad",
     "email": "E-poçt",
-    "password": "Parol",
+    "password": "Şifrə",
     "username": "İstifadəçi adı",
     "login": "Daxil ol",
-    "signup": "Qeydiyyatdan keçin",
+    "signup": "Qeydiyyat",
     "register": "Qeydiyyatdan keç"
 }

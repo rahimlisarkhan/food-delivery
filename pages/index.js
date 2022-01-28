@@ -1,15 +1,15 @@
-import { useTranslation } from 'next-i18next';
 import Head from 'next/head'
 import { Fragment } from 'react'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useTranslation } from 'next-i18next';
 import dynamic from 'next/dynamic';
 
 const Layout = dynamic(() => import('../components/Layout'))
 const HomeContainer = dynamic(() => import('../features/Home/HomeContainer'))
 
-export default function Home() {
+ const HomePage = () => {
 
-  const { t } = useTranslation();
+  const { t } = useTranslation("menu");
 
   return (
     <Fragment>
@@ -24,6 +24,7 @@ export default function Home() {
   )
 }
 
+export default HomePage
 
 export async function getServerSideProps({ locale }) {
   let languages = { ...await serverSideTranslations(locale, ['common', 'menu']) }

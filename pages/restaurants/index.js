@@ -9,7 +9,7 @@ const RestaurantContainer = dynamic(() => import('../../features/Restaurant/Rest
 
 export default function Restaurants() {
 
-  const { t } = useTranslation();
+  const { t } = useTranslation("menu");
 
   return (
     <Fragment>

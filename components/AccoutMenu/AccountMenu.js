@@ -1,13 +1,19 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Menu from '@mui/material/Menu';
-import MenuItem from '@mui/material/MenuItem';
 import IconButton from '@mui/material/IconButton';
 import Tooltip from '@mui/material/Tooltip';
 import { AvatarStyled } from './AccountMenu.styled';
+import { router } from '../../util/route';
+import { useRouter } from 'next/router';
+import { useTranslation } from 'next-i18next';
+import { MenuItemStyled } from "./AccountMenu.styled"
+
 
 export const AccountMenu = () => {
   const [anchorEl, setAnchorEl] = React.useState(null);
+  const { push } = useRouter();
+  const { t } = useTranslation("menu")
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -98,21 +104,16 @@ export const AccountMenu = () => {
         transformOrigin={{ horizontal: 'right', vertical: 'top' }}
         anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
       >
-        <MenuItem>
-          Profile
-        </MenuItem>
-        <MenuItem>
-          Your Basket
-        </MenuItem>
-        <MenuItem>
-          Your Orders
-        </MenuItem>
-        <MenuItem>
-          Checkout
-        </MenuItem>
-        <MenuItem>
-          Logout
-        </MenuItem>
+
+        {Object.values(router.user)
+          .map(({ id, href, title, icon }) => {
+            return (
+              <MenuItemStyled key={`user-nav-${id}`} onClick={() => push(href)}>
+                {icon}
+                {t(title)}
+              </MenuItemStyled>
+            )
+          })}
       </Menu>
     </React.Fragment>
   );

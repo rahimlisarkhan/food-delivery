@@ -1,3 +1,9 @@
+import PeopleIcon from '@mui/icons-material/People';
+import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
+import FilterFramesIcon from '@mui/icons-material/FilterFrames';
+import LogoutIcon from '@mui/icons-material/Logout';
+import PointOfSaleIcon from '@mui/icons-material/PointOfSale';
+
 export const router = {
     menu: {
         home: {
@@ -31,5 +37,37 @@ export const router = {
             href: "/login",
         }
 
+    },
+    user: {
+        profile: {
+            id: "007",
+            title: "profile",
+            href: "/user?page=profile",
+            icon:<PeopleIcon/>
+        },
+        basket: {
+            id: "008",
+            title: "basket",
+            href: "/user?page=basket",
+            icon:<ShoppingBasketIcon/>
+        },
+        orders: {
+            id: "009",
+            title: "orders",
+            href: "/user?page=orders",
+            icon:<FilterFramesIcon/>
+        },
+        checkout: {
+            id: "010",
+            title: "checkout",
+            href: "/user?page=checkout",
+            icon:<PointOfSaleIcon/>
+        },
+        logout: {
+            id: "011",
+            title: "login",
+            href: "/login",
+            icon:<LogoutIcon/>
+        }
     }
 }

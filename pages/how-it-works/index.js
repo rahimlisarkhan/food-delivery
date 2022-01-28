@@ -25,7 +25,7 @@ export default function Restaurants() {
 }
 
 
-export async function getServerSideProps({ locale }) {
+export async function getStaticProps({ locale }) {
   let languages = { ...await serverSideTranslations(locale, ['common', 'menu']) }
  
    return {

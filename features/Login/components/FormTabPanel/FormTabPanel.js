@@ -45,7 +45,7 @@ const a11yProps = (index) => {
 
 export const FormTabPanel = ({ setChange }) => {
   const [value, setValue] = React.useState(0);
-  const { t } = useTranslation();
+  const { t } = useTranslation("form");
 
   const handleChange = (event, newValue) => {
     console.log(newValue);

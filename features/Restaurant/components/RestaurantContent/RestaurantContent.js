@@ -4,8 +4,6 @@ import Paginations from "../../../../components/Pagination";
 
 export const RestaurantContent = ({ restaurantData, handlePages, pagesCount }) => {
 
-
-
     return (
         <RestaurantContentStyled>
             <RestaurantList>

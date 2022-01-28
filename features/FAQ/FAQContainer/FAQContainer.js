@@ -6,12 +6,12 @@ import { useTranslation } from "next-i18next"
 
 export const FAQContainer = () => {
 
-    let { t } = useTranslation() 
+    let { t } = useTranslation("menu") 
 
     return(
         <Content>
             <TextTypograpy font="45" center="true" bold="true">
-                  {t("FAQ")}
+                  {t("faqs")}
             </TextTypograpy>
             <FAQAccardion/>
         </Content>

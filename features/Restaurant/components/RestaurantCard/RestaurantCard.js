@@ -3,15 +3,17 @@ import * as React from 'react';
 import Button from '../../../../components/Button';
 import TypographyText from '../../../../components/Typograph';
 import * as Style from './RestaurantCard.styled';
+import { useCallback } from "react"
 
 export const RestaurantCard = ({ name, delivery_price, delivery_min, img_url, cuisine, category, slug }) => {
 
   let { push, asPath, query } = useRouter()
 
-  const openRestaurant = () => {
+  const openRestaurant = useCallback(() => {
     let path = query.category ? asPath + `&name=${slug}` : asPath + `/restaurant/?name=${slug}`
     push(path)
-  }
+
+  }, [query.category, asPath, slug, push])
 
   return (
     <Style.CardCol>

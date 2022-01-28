@@ -53,7 +53,7 @@ const Header = () => {
             return (
                 <HeaderStyled.Bottom>
                     <HeaderStyled.Info>
-                        <Typography bold="true" font="60">
+                        <Typography bold="true" font="55">
                             {t("header title")}
                         </Typography>
                         <Typography font="22" color="gray">

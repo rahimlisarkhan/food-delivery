@@ -7,7 +7,7 @@ import { useState } from "react";
 export const LoginForm = ({ initialValues, inputs,changeButton }) => {
 
     let [visible, setVisible] = useState(false)
-    const { t } = useTranslation();
+    const { t } = useTranslation("form");
 
     const onSubmit = (values, { resetForm }) => {
         console.log(values);
@@ -86,7 +86,7 @@ export const LoginForm = ({ initialValues, inputs,changeButton }) => {
                     }
                 })}
     
-                <FormSubmit>{!changeButton ? t("login") : t("signup")}</FormSubmit>
+                <FormSubmit>{!changeButton ? t("login") : t("register")}</FormSubmit>
             </FormStyled>
 
         </LoginFormContent>

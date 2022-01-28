@@ -15,6 +15,8 @@ export const TypographyText = styled(Typography).attrs(() => ({
                     return theme.colors.textBlack;
                 case "gray":
                     return theme.colors.grayText1;
+                case "darkgray":
+                    return theme.colors.grayText2;
                 case "red":
                     return theme.colors.mainRed;
                 case "green":

@@ -3,5 +3,10 @@
     "restaurants": "Restaurants",
     "about us": "About us",
     "how it works": "How it works",
-    "faqs": "FAQ's"
+    "faqs": "FAQ's",
+    "profile":"Profile",
+    "basket":"Your Basket",
+    "orders":"Your Orders",
+    "checkout":"Checkout",
+    "login":"Logout"
 }
