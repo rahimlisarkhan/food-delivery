@@ -40,7 +40,7 @@ const Header = () => {
                     {!login &&
                         <>
                             <Button width="117" onClick={() => push(router.menu.login.href)}>{t('sign_up')}</Button>
-                            <BasketBadge count={8} />
+                            <BasketBadge count={8} onClick={() => push(router.user.basket.href)}/>
                             <AccountMenu />
                         </>}
                 </HeaderStyled.ButtonGroup>
