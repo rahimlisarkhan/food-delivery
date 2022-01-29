@@ -7,7 +7,7 @@ import { useRouter } from 'next/router';
 
 const Layout = dynamic(() => import('../../components/Layout'))
 const RestaurantContainer = dynamic(() => import('../../features/Restaurant/RestaurantContainer'))
-const MenuContainer = dynamic(() => import('../../features/Restaurant/MenuContainer'))
+const MenuContainer = dynamic(() => import('../../features/Menu/MenuContainer'))
 
 export default function RestaurantSlug(props) {
 

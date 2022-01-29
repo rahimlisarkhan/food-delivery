@@ -19,7 +19,7 @@ export const ButtonStyled = styled(Button).attrs(() => ({
         }
     }
     } !important;
-    /* margin:0 ${({ theme }) => theme.boxModel.margin.normal}; */
+    margin:0 ${({ theme }) => theme.boxModel.margin.small} !important;
     border-radius: 30px !important; 
 
     &:hover{

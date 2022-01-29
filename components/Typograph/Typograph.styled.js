@@ -28,13 +28,14 @@ export const TypographyText = styled(Typography).attrs(() => ({
         }
         } !important;
         font-size:${font ? `${font}px` : theme.font.size.medium} !important;
-        text-align:${center ? `center` : "none"} !important;
         margin:${margin ? `${margin}px 0` : "10px 0"} !important;
         font-weight:${bold && `600`} !important;
         line-height: 1.3 !important;
         text-transform: capitalize !important;
         display: flex;
         align-items: flex-end;
+        text-align:${center ? `center` : "none"} !important;
+        justify-content:${center ? `center` : "none"} !important;
         svg{
             margin-right: 5px;
         }

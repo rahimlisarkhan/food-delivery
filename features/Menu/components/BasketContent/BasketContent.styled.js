@@ -26,7 +26,8 @@ export const BasketStyled = styled(Box)`
 export const BasketListContent = styled(Box)`
 height: 400px;
 margin-bottom: 20px;
-overflow: auto;
+overflow-x: hidden;
+overflow-y: auto;
 `
 
 

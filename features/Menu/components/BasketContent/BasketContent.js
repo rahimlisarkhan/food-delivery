@@ -3,7 +3,7 @@ import { BasketContentStyled, BasketStyled, CheckoutButton, CheckoutInfo, Basket
 import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
 import { router } from "../../../../util/route"
 import { useRouter } from "next/router"
-import { BasketCard } from "../BasketCard/BasketCard";
+import BasketCard from "../BasketCard";
 
 export const BasketContent = () => {
 
@@ -21,6 +21,8 @@ export const BasketContent = () => {
                          3 items
                     </TypographyText>
                     <BasketListContent>
+                         <BasketCard/>
+                         <BasketCard/>
                          <BasketCard/>
                     </BasketListContent>
                     <CheckoutButton onClick={onCheckout}>

@@ -13,7 +13,6 @@ export const ProductsContent = () => {
                 <ProductsList>
                     <ProductCard />
                     <ProductCard />
-                    <ProductCard />
                 </ProductsList>
             </ProductsStyled>
         </ProductsContentStyled>

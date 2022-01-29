@@ -20,7 +20,13 @@ export const MenuContainer = () => {
             title: "Pizza",
             img_url: "/image/pizza.png"
         },
-        img_url: "https://media-cdn.tripadvisor.com/media/photo-s/19/f5/62/cb/papa-john-s-pizza.jpg"
+        img_url: "https://media-cdn.tripadvisor.com/media/photo-s/19/f5/62/cb/papa-john-s-pizza.jpg",
+        // products:[{
+        //     id: "002",
+        //     slug: "pizza",
+        //     title: "Pizza",
+        //     img_url: "/image/pizza.png"
+        // }]
     }
     
     return (
