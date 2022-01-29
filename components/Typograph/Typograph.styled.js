@@ -3,12 +3,11 @@ import styled, { css } from "styled-components";
 
 
 export const TypographyText = styled(Typography).attrs(() => ({
-    // gutterBottom:true, 
     variant: "h6",
     component: "div"
 }))`
     padding: 0 !important;
-    ${({ theme, font, color, bold, center }) => css`
+    ${({ theme, font, color, bold, center, margin }) => css`
         color:${() => {
             switch (color) {
                 case "dark":
@@ -19,6 +18,8 @@ export const TypographyText = styled(Typography).attrs(() => ({
                     return theme.colors.grayText2;
                 case "red":
                     return theme.colors.mainRed;
+                case "white":
+                    return theme.colors.white;
                 case "green":
                     return theme.colors.textGreenLight;
                 default:
@@ -28,8 +29,14 @@ export const TypographyText = styled(Typography).attrs(() => ({
         } !important;
         font-size:${font ? `${font}px` : theme.font.size.medium} !important;
         text-align:${center ? `center` : "none"} !important;
-        font-weight:${bold && `bold`} !important;
-        margin:10px 0 !important;
+        margin:${margin ? `${margin}px 0` : "10px 0"} !important;
+        font-weight:${bold && `600`} !important;
         line-height: 1.3 !important;
+        text-transform: capitalize !important;
+        display: flex;
+        align-items: flex-end;
+        svg{
+            margin-right: 5px;
+        }
         `}
 `

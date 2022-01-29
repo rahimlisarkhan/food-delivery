@@ -2,8 +2,11 @@
 
 
 
+import AboutContent from "../components/AboutContent"
+
 export const AboutContainer = () => {
-    return(
-        <h1>About</h1>
+
+    return (
+        <AboutContent/>
     )
 }

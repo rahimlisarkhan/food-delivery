@@ -1,11 +1,10 @@
 import { Box, Grid } from "@mui/material";
 import styled from "styled-components";
-import Image from "../../../components/Image"
 
 
 export const Content = styled(Grid).attrs(()=>({
     item:true,
-    md:12
+    md:12,
 }))`
 margin-top: 40px;
 ` 
@@ -16,14 +15,15 @@ export const ContentRow = styled(Grid).attrs(()=>({
 
 export const TitleContent = styled(Grid).attrs(()=>({
     item:true,
-    md:6
+    md:5,
 }))`
+padding-left:58px;
 ` 
 
 
 export const ProductContent = styled(Grid).attrs(()=>({
     item:true,
-    md:6
+    md:7
 }))`
 display:flex;
 justify-content: center;

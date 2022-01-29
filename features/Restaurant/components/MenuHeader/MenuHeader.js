@@ -1,9 +1,12 @@
-import { MenuHeaderStyled, MenuImage, MenuInfo, InfoTitle, MenuContent,InfoDelivery } from "./MenuHeader.styled"
+import { MenuHeaderStyled, MenuImage, MenuInfo, InfoTitle, MenuContent, InfoDelivery } from "./MenuHeader.styled"
 import TypographyText from "../../../../components/Typograph"
-
+import { useRouter } from "next/router"
 
 
 export const MenuHeader = ({ img_url }) => {
+
+    let { back } = useRouter()
+
     return (
         <MenuHeaderStyled>
             <MenuImage src={img_url} />
@@ -19,6 +22,9 @@ export const MenuHeader = ({ img_url }) => {
                     </InfoTitle>
                     <InfoDelivery>
                         $5 Delivery
+                    </InfoDelivery>
+                    <InfoDelivery back="true" onClick={() => back()}>
+                        Go Back
                     </InfoDelivery>
                 </MenuContent>
             </MenuInfo>

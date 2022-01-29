@@ -1,10 +1,12 @@
-import { Box } from "@mui/material";
+import { Box, Grid } from "@mui/material";
 import styled from "styled-components";
 import Image from "../../../components/Image"
 
 
-export const Content = styled(Box)`
-width: 80%;
+export const Content = styled(Grid).attrs(()=>({
+    item:true,
+    md:9
+}))`
 margin: 0 auto;
 ` 
 
