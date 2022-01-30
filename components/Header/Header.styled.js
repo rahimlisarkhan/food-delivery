@@ -16,7 +16,7 @@ export const Content = styled.header`
 `;
 
 
-export const Top = styled.div`
+export const Top = styled(Box)`
     display:flex;
     align-items:center;
     margin-top:5px;
@@ -24,20 +24,20 @@ export const Top = styled.div`
 `;
 
 
-export const ButtonGroup = styled.div`
+export const ButtonGroup = styled(Box)`
     display:flex;
     align-items:center;
     margin:${({ theme, margin }) => margin && "45px"} 0;
 `;
 
-export const MenuGroup = styled.div`
+export const MenuGroup = styled(Box)`
     display:flex;
     align-items:center;
     justify-content:space-between;
 `;
 
 
-export const Bottom = styled.div`
+export const Bottom = styled(Box)`
     display:flex;
     align-items:center;
     justify-content:space-between;

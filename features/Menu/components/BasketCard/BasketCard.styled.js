@@ -14,6 +14,7 @@ export const BasketCardStyled = styled(Box)`
 
 export const BasketCardInfo = styled(Box)`
 margin:0 10px;
+width:65%;
 `
 
 export const BasketCardButton = styled(Button)`

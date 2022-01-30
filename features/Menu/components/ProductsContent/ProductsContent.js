@@ -3,7 +3,8 @@ import TextTypograph from "../../../../components/Typograph"
 import ProductCard from "../ProductCard"
 
 
-export const ProductsContent = () => {
+export const ProductsContent = ({ products }) => {
+
     return (
         <ProductsContentStyled>
             <ProductsStyled>
@@ -11,8 +12,8 @@ export const ProductsContent = () => {
                     Products
                 </TextTypograph>
                 <ProductsList>
-                    <ProductCard />
-                    <ProductCard />
+                    {products.map((product, index) => <ProductCard key={`product-id-${product.id}`} 
+                                                                   {...product} />)}
                 </ProductsList>
             </ProductsStyled>
         </ProductsContentStyled>

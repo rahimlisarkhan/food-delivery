@@ -34,7 +34,7 @@ overflow-y: auto;
 export const CheckoutButton = styled(Button)`
     width:100%;
     height: 47px;
-    background-color:${({theme})=>theme.colors.mainRed} !important;
+    background-color:${({theme,empty})=>empty ? theme.colors.whiteLight3 : theme.colors.mainRed} !important;
     color:${({theme})=>theme.colors.white} !important;
     border-radius: 100px !important;
     padding:2px 2px 2px 24px !important;
@@ -54,7 +54,7 @@ export const CheckoutInfo = styled(Box)`
     height: 43px;
     border-radius: 100px !important;
     background-color:${({theme})=>theme.colors.white};
-    color:${({theme})=>theme.colors.mainRed} !important;
+    color:${({theme,empty})=>empty ? theme.colors.whiteLight3 : theme.colors.mainRed} !important;
     display: flex;
     justify-content: center;
     font-weight: 600;
