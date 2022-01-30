@@ -2,7 +2,6 @@ import TypographyText from "../../../../components/Typograph"
 import { ProductCardStyled, ProductCardInfo, ProductCardButton, ProductCardContent } from "./ProductCard.styled"
 import Image from "../../../../components/Image"
 import AddIcon from '@mui/icons-material/Add';
-import { useEffect, useState,useMemo } from "react";
 import { toast } from "react-toastify";
 import { useTranslation } from "next-i18next";
 import { useDispatch, useSelector } from "react-redux";
@@ -12,34 +11,23 @@ export const ProductCard = ({ id, desc, img_url, name, price, stockLimit }) => {
     const basket = useSelector(state => state.basket.basket)
     const dispatch = useDispatch()
     const { t } = useTranslation()
-    const [count, setCount] = useState(1)
-    
+    let productInBasket =  basket?.find(item => item.id === id)
         
-    useEffect(() => {
-
-        // let product = basket?.find(item => item.id === id)
-        // setProduct(basket?.filter(item => item.id === id)[0])
-        // console.log("productcount",product?.count);
-
-    }, [id])
-    
     
     const increment = () => {
 
         let productsData = JSON.parse(localStorage.getItem("basket")) || []
-        let totalPrice = (count || 1) * price
+        let totalPrice = (productInBasket?.count || 1) * price
 
-        if (stockLimit <= count) {
+        if (stockLimit <= productInBasket?.count) {
             toast.error(t("stock"))
             return
         }
 
-        setCount(prev => prev += 1)
-
         if (productsData.length && productsData.some(product => product.id === id)) {
             productsData.map(product => {
                 if (product.id === id) {
-                    product.count = count
+                    product.count += 1 
                     product.totalPrice = totalPrice
                 }
                 return product
@@ -55,7 +43,7 @@ export const ProductCard = ({ id, desc, img_url, name, price, stockLimit }) => {
             desc,
             img_url,
             stockLimit,
-            count: count || 1,
+            count:1,
             name,
             price,
             totalPrice

@@ -9,8 +9,8 @@ export const AvatarStyled = styled(Avatar)`
 
 export const MenuItemStyled = styled(MenuItem)`
 
-    color: ${({ theme }) => theme.colors.grayText2};
+    color: ${({ theme }) => theme.colors.grayText2} !important;
     svg{
-        margin-right: 10px;
+        margin-right: 10px !important;
     }
 `

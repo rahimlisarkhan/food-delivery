@@ -7,7 +7,7 @@ export const Content = styled(Grid).attrs(()=>({
     item:true,
     md:9
 }))`
-margin: 0 auto;
+margin: 0 auto !important;
 ` 
 
 export const ImageContent = styled(Box)`

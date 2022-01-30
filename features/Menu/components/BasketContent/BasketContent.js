@@ -4,6 +4,7 @@ import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
 import { router } from "../../../../util/route"
 import { useRouter } from "next/router"
 import BasketCard from "../BasketCard";
+import EmptyBasket from "../EmptyBasket"
 import PropTypes from "prop-types";
 import { useEffect, useState } from "react";
 
@@ -34,7 +35,7 @@ export const BasketContent = ({ basket }) => {
                     <BasketListContent>
                          {basketFill
                               ? basket?.map(product => <BasketCard key={`basket-product-id-${product.id}`} {...product} />)
-                              : <h1>No Basket</h1>
+                              : <EmptyBasket/>
                          }
                     </BasketListContent>
                     <CheckoutButton disabled={!basketFill ? true : false} 

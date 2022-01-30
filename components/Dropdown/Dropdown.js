@@ -74,6 +74,7 @@ const Dropdown = () => {
                         {...TransitionProps}
                         placement={placement}
                     >
+                         {/* style={{display:"flex",flexDirection:"column",padding:"10px"}} */}
                         <Paper>
                             <ClickAwayListener onClickAway={handleClose}>
                                 <MenuList id="split-button-menu">
