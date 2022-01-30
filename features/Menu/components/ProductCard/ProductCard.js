@@ -70,16 +70,15 @@ export const ProductCard = ({ id, desc, img_url, name, price, stockLimit }) => {
             </ProductCardContent>
             <ProductCardContent row="true">
                 <TypographyText color="darkgray" font="16" bold="true">
-                    <TypographyText color="gray" font="12" >
-                        from
-                    </TypographyText>
+                    {/* <TypographyText color="gray" font="12" > */}
+                        {/* from */}
+                    {/* </TypographyText> */}
                     ${price}
                 </TypographyText>
                 <ProductCardButton onClick={increment}>
                     <AddIcon />
                 </ProductCardButton>
             </ProductCardContent>
-
         </ProductCardStyled>
     )
 }

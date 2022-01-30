@@ -12,7 +12,7 @@ export const MenuContainer = () => {
         <Fragment>
             <MenuHeader {...restaurantData} />
             <ProductsContent products={restaurantData.products} />
-            <BasketContent basket={basket} />
+            <BasketContent fixed="true" basket={basket} />
         </Fragment>
     )
 }

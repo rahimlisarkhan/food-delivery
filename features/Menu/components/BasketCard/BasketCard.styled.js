@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 export const BasketCardStyled = styled(Box)`
     border-top: 1px solid ${({ theme }) => theme.colors.whiteLight2};
-    height:100px;
+    height:${({fixed})=> fixed==="true" ? "100px" : "163px"};
     padding:35px 0;
     display: flex;
     /* justify-content: space-; */
@@ -14,12 +14,13 @@ export const BasketCardStyled = styled(Box)`
 
 export const BasketCardInfo = styled(Box)`
 margin:0 10px;
-width:65%;
+width:${({fixed})=> fixed==="true" ? "65%" : "80%"};
+
 `
 
 export const BasketCardButton = styled(Button)`
-    min-width: 29px !important;
-    height: 70px !important;
+    min-width:${({fixed})=> fixed==="true" ? "29px" : "41px"} !important;
+    height:${({fixed})=> fixed==="true" ? "70px" : "90px"} !important;
     border-radius: 50px !important;
     display: flex;
     flex-direction: column;

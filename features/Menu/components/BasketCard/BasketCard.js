@@ -7,8 +7,9 @@ import DeleteSweepIcon from '@mui/icons-material/DeleteSweep';
 import { useTranslation } from "next-i18next";
 import { fillBasket } from "../../../../store/slices/basket/basketSlice";
 import { useDispatch } from "react-redux";
+import { Box as ActionBox } from "@material-ui/core";
 
-export const BasketCard = ({ id, img_url, name, count, price, totalPrice, stockLimit }) => {
+export const BasketCard = ({ id, img_url, name, count, price, totalPrice, stockLimit, fixed }) => {
 
     let [countB, setCountB] = useState(count || 1)
     let { t } = useTranslation()
@@ -60,7 +61,7 @@ export const BasketCard = ({ id, img_url, name, count, price, totalPrice, stockL
         }
     }
 
-    const deleteProductBasket = (id) =>{
+    const deleteProductBasket = (id) => {
         let productsData = JSON.parse(localStorage.getItem("basket")) || []
 
         if (productsData.length && productsData.some(product => product.id === id)) {
@@ -72,28 +73,30 @@ export const BasketCard = ({ id, img_url, name, count, price, totalPrice, stockL
     }
 
     return (
-        <BasketCardStyled>
-            <Image src={img_url} alt="pizza" width="45" height="45" cover="true" />
-            <BasketCardInfo>
-                <TypographyText color="darkgray" font="16">
+        <BasketCardStyled fixed={fixed}>
+            <Image src={img_url} alt="pizza" width={fixed === "true" ? "45" : "96"} height={fixed === "true" ? "45" : "96"} cover="true" />
+            <BasketCardInfo fixed={fixed}>
+                <TypographyText color="darkgray" font={fixed === "true" ? "16" : "22"}>
                     {name}
                 </TypographyText>
-                <TypographyText color="darkgray" font="14">
+                <TypographyText color="darkgray" font={fixed === "true" ? "14" : "18"}>
                     ${totalPrice?.toFixed(2)}
                 </TypographyText>
             </BasketCardInfo>
-            <BasketCardButton>
-                <TypographyText color="darkgray" margin="0" font="20" onClick={() => AddRemove("increment")} >
-                    +
-                </TypographyText>
-                <TypographyText color="darkgray" margin="0" onClick={() => AddRemove("increment")}>
-                    {countB}
-                </TypographyText>
+            <BasketCardButton fixed={fixed}>
+                <ActionBox onClick={() => AddRemove("increment")}>
+                    <TypographyText color="darkgray" margin="0" font="20">
+                        +
+                    </TypographyText>
+                    <TypographyText color="darkgray" margin="0" >
+                        {countB}
+                    </TypographyText>
+                </ActionBox>
                 <TypographyText color="darkgray" margin="0" font="20" onClick={() => AddRemove("decrement")}>
                     -
                 </TypographyText>
             </BasketCardButton>
-            <BasketCardDelete onClick={()=>deleteProductBasket(id)}>
+            <BasketCardDelete onClick={() => deleteProductBasket(id)}>
                 <DeleteSweepIcon />
             </BasketCardDelete>
         </BasketCardStyled>

@@ -4,8 +4,7 @@ import TypographyText from "../../../../components/Typograph"
 import {EmptyBasketStyled} from "./EmptyBasket.styled"
 
 export const EmptyBasket = () =>{
-
-    let { t } = useTranslation()
+    let { t } = useTranslation("common")
 
     return(
         <EmptyBasketStyled>
