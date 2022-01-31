@@ -1,7 +1,6 @@
 import { Typography } from "@mui/material";
 import styled, { css } from "styled-components";
 
-
 export const TypographyText = styled(Typography).attrs(() => ({
     variant: "h6",
     component: "div"
